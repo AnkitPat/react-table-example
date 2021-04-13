@@ -1,0 +1,69 @@
+
+  table {
+    border-spacing: 0;
+    border: 1px solid black;
+  }
+  .thead {
+    overflow-y: auto;
+    overflow-x: hidden;
+  }
+
+  .tbody {
+    overflow-y: scroll;
+    overflow-x: hidden;
+    height: 250px;
+  }
+
+   table th,
+    td {
+      margin: 0;
+      padding: 0.5rem;
+      border-bottom: 1px solid black;
+      border-right: 1px solid black;
+      background: white;
+      position: relative;
+    
+  }
+
+
+  .resizer {
+    display: inline-block;
+    background:#52ACE7;
+    width: 4px;
+    height: 100%;
+    position: absolute;
+    right: 0;
+    top: 0;
+    transform: translateX(50%);
+    z-index: 1;
+   
+    touch-action:none;
+  }
+    .isResizing {
+      background: wheat;
+    
+  }
+
+  .table-controls {
+
+    display: flex;
+    flex-direction: row;
+    padding: 2px;
+  }
+
+  .table-controls button:last-child {
+    margin-left: 10px;
+  }
+
+  .reset-button {
+    background-color: #52ACE7;
+    border: none;
+    color: white;
+    cursor: pointer;
+  }
+
+  .reset-button:hover {
+    background-color: white; /* Green */
+    border: #52ACE7 1px solid;
+    color: #52ACE7;
+  }

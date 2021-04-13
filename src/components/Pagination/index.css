@@ -1,0 +1,14 @@
+.pagination {
+    padding: 5px;
+}
+
+.pagination button {
+    background-color: #52ACE7;
+    border: none;
+    color: white;
+}
+
+.button-disable {
+    background-color: gray  !important;
+    touch-action: none;
+}
