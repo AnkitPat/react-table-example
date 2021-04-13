@@ -1,24 +1,26 @@
-import logo from './logo.svg';
+import React from 'react';
+import { Table } from './components/Table';
+import moment from 'moment';
 import './App.css';
 
 function App() {
+  const [data ,setData] = React.useState([]);
+
+  React.useEffect(() => {
+    fetch('https://canopy-frontend-task.vercel.app/api/transactions', { method: "GET" }).then(async value => {
+      const transactionData = await value.json();
+      setData(transactionData.transactions)
+    })
+  }, [])
+
+ 
+
+
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Table columns={columns} data={data}  enableResizing={true} enablePagination={data.length > 0} enableSorting={true} showColumnDraggingOption={true}/>
+    </>
   );
 }
 
