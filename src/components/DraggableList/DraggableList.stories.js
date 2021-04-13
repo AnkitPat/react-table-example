@@ -34,11 +34,11 @@ DraggableListWithHeader.args = {
   list: [
     {
       id: '1',
-      Header: 'Check1'
+      Header: 'WithHeader1'
     },
     {
       id: '2',
-      Header: 'Check2'
+      Header: 'WithHeader2'
     }
   ],
   onListUpdated: () => {},
@@ -53,11 +53,11 @@ DraggableListWithHeaderAndListColor.args = {
   list: [
     {
       id: '1',
-      Header: 'Check1'
+      Header: 'WithHeaderAndListColor1'
     },
     {
       id: '2',
-      Header: 'Check2'
+      Header: 'WithHeaderAndListColor2'
     }
   ],
   onListUpdated: () => {},
@@ -74,11 +74,11 @@ DraggableListWithListItemStyling.args = {
   list: [
     {
       id: '1',
-      Header: 'Check1'
+      Header: 'Complete1'
     },
     {
       id: '2',
-      Header: 'Check2'
+      Header: 'Complete2'
     }
   ],
   onListUpdated: () => {},
