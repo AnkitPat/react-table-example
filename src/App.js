@@ -2,12 +2,13 @@ import React from 'react';
 import { Table } from './components/Table';
 import moment from 'moment';
 import './App.css';
+import { API_BASE_URL } from './components/constants';
 
 function App() {
   const [data ,setData] = React.useState([]);
 
   React.useEffect(() => {
-    fetch('https://canopy-frontend-task.vercel.app/api/transactions', { method: "GET" }).then(async value => {
+    fetch(API_BASE_URL + 'api/transactions', { method: "GET" }).then(async value => {
       const transactionData = await value.json();
       setData(transactionData.transactions)
     })
