@@ -6,8 +6,6 @@ import PropTypes from 'prop-types';
 import Pagination from '../Pagination'
 
 export const Table = ({ columns, data, enableSorting, enableResizing, showColumnDraggingOption, enablePagination }) => {
-
-
     const defaultColumn = React.useMemo(
         () => ({
             minWidth: 30,
